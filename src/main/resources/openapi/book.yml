@@ -11,7 +11,7 @@ info:
     
     Some useful links:
     - [The BookAndAuthor repository](https://github.com/Csaba79-coder/bookAndAuthor)
-    - [The source API definition for the BookAndAuthor](https://github.com/Csaba79-coder/bookAndAuthor)
+    - [The source API definition for the BookAndAuthor](https://github.com/Csaba79-coder/bookAndAuthor/tree/master/src/main/resources/openapi/book.yml)
   termsOfService: http://localhost:8080/
   contact:
     email: csabavadasz79@gmail.com
