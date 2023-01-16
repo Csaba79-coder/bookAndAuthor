@@ -7,11 +7,11 @@ info:
     You can now help us improve the API whether it's by making changes to the definition itself or to the code.
     That way, with time, we can improve the API in general, and expose some of the new features in OAS3.
 
-    _If you're looking for the Swagger 2.0/OAS 2.0 version of Petstore, then click [here](https://github.com/Csaba79-coder/bookAndAuthor/blob/master/src/main/resources/book.yml)._
+    _If you're looking for the Swagger 2.0/OAS 2.0 version of Petstore, then click [here](https://github.com/Csaba79-coder/bookAndAuthor/blob/master/src/main/resources/book.yaml)._
     
     Some useful links:
     - [The BookAndAuthor repository](https://github.com/Csaba79-coder/bookAndAuthor)
-    - [The source API definition for the BookAndAuthor](https://https://github.com/Csaba79-coder/bookAndAuthor/blob/master/src/main/resources/book.yml)
+    - [The source API definition for the BookAndAuthor](https://https://github.com/Csaba79-coder/bookAndAuthor/blob/master/src/main/resources/book.yaml)
   termsOfService: http://localhost:8080
   contact:
     email: csabavadasz79@gmail.com

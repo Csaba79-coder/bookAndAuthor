@@ -15,6 +15,7 @@
     <description>bookAndAuthor</description>
     <properties>
         <java.version>17</java.version>
+        <start-class>com.bt.collab.alu.api.webapp.Application</start-class>
     </properties>
     <dependencies>
         <dependency>
@@ -73,22 +74,6 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.openapitools</groupId>
-            <artifactId>jackson-databind-nullable</artifactId>
-            <version>0.2.1</version>
-        </dependency>
-        <!--<dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.0.0</version>
-        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/io.swagger.codegen.v3/swagger-codegen-cli -->
-        <dependency>
-            <groupId>io.swagger.codegen.v3</groupId>
-            <artifactId>swagger-codegen-cli</artifactId>
-            <version>3.0.36</version>
-        </dependency>
     </dependencies>
 
     <build>
@@ -104,84 +89,6 @@
                         </exclude>
                     </excludes>
                 </configuration>
-            </plugin>
-            <!--<plugin>
-                <groupId>org.openapitools</groupId>
-                <artifactId>openapi-generator-maven-plugin</artifactId>
-                <version>5.1.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <inputSpec>
-                                ${project.basedir}/src/main/resources/book.yml
-                            </inputSpec>
-                            <generatorName>spring</generatorName>
-                            <apiPackage>com.csaba79coder.openapi.api</apiPackage>
-                            <modelPackage>com.csaba79coder.openapi.model</modelPackage>
-                            <supportingFilesToGenerate>
-                                ApiUtil.java
-                            </supportingFilesToGenerate>
-                            <configOptions>
-                                <delegatePattern>true</delegatePattern>
-                                <validateSpec>false</validateSpec>
-                            </configOptions>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>-->
-            <plugin>
-                <groupId>org.openapitools</groupId>
-                <artifactId>openapi-generator-maven-plugin</artifactId>
-                <!-- RELEASE_VERSION -->
-                <version>5.0.1</version>
-                <!-- /RELEASE_VERSION -->
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <!-- General Configuration properties taken from -->
-                            <!-- https://github.com/OpenAPITools/openapi-generator/blob/master/modules/openapi-generator-maven-plugin/README.md -->
-                            <!--Changed to https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin-->
-                            <!-- Modifications from https://stackoverflow.com/questions/64304049/how-to-create-a-spring-boot-rest-server-using-openapitools/64363872#64363872 -->
-                            <ignoreFileOverride>${project.basedir}/my-springboot.ignores</ignoreFileOverride>  <!--Added-->
-                            <inputSpec>${project.basedir}/src/main/resources/book.yaml</inputSpec>
-                            <!--the language tag was replaced by the generatorName tag:-->
-                            <generatorName>spring</generatorName>
-                            <!--<templateDirectory>${project.basedir}/src/gen/templates/</templateDirectory>-->
-                            <!--<templateResourcePath>${project.basedir}/src/gen/templates/</templateResourcePath>-->
-                            <!-- <output>${project.basedir}</output>-->
-                            <!-- Defaults to ${project.build.directory}/generated-sources/openapi -->
-                            <apiPackage>com.csaba79coder.openapi.api</apiPackage>
-                            <modelPackage>com.csaba79coder.openapi.model</modelPackage>
-                            <invokerPackage>com.dummy.csaba79coder</invokerPackage>
-                            <packageName>com.dummy.csaba79coder.objects</packageName>
-                            <groupId>com.csaba79-coder</groupId>
-                            <artifactId>bookAndAuthor</artifactId>
-                            <library>spring-boot</library>
-                            <generateModelTests>false</generateModelTests>
-                            <!--<output>${project.basedir}/my-springboot</output> &lt;!&ndash; Added &ndash;&gt;-->
-                            <!--<generateSupportingFiles>false</generateSupportingFiles>-->
-                            <configOptions>
-                                <!-- configOptions are specific to the spring generator. These are taken from -->
-                                <!-- https://github.com/OpenAPITools/openapi-generator/blob/master/docs/generators/spring.md -->
-                                <sourceFolder>gen</sourceFolder>
-                                <bigDecimalAsString>true</bigDecimalAsString>
-                                <dateLibrary>java8</dateLibrary> <!-- Default-->
-                                <delegatePattern>false</delegatePattern>
-                                <performBeanValidation>true</performBeanValidation>
-                                <useBeanValidation>true</useBeanValidation>
-                                <skipDefaultInterface>false</skipDefaultInterface>
-                                <library>spring-boot</library>
-                                <interfaceOnly>true</interfaceOnly>
-                            </configOptions>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
