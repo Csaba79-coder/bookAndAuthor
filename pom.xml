@@ -92,4 +92,9 @@
         </plugins>
     </build>
 
+    <scm>
+        <developerConnection>scm:git:git@github.com:Csaba79-coder/bookAndAuthor</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
 </project>
